@@ -90,6 +90,7 @@ class _ListViewWitGMapsState extends State<ListViewWitGMaps> {
           //List View for given Data
           ListView.builder(
             shrinkWrap: true,
+            physics : ClampingScrollPhysics(),
             itemCount: locations.length,
             itemBuilder: (context, index) {
               return Card(
