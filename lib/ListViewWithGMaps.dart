@@ -16,7 +16,7 @@ class _ListViewWitGMapsState extends State<ListViewWitGMaps> {
 
   //using predefined function of location in package
   Location _location = Location();
-
+//google map controller
   GoogleMapController _controller;
 
   //function for getting current location of user and updating it in realtime
@@ -43,8 +43,7 @@ class _ListViewWitGMapsState extends State<ListViewWitGMaps> {
     services(from: "Z", to: "X", value: 5),
     services(from: "Z", to: "Y", value: 15),
   ];
-
-// generate a random index based on the list length
+//ui part
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +112,7 @@ class _ListViewWitGMapsState extends State<ListViewWitGMaps> {
           Expanded(
             child: GoogleMap(
               initialCameraPosition:
-                  CameraPosition(target: _initialPosition, zoom: 3),
+                  CameraPosition(target: _initialPosition, zoom: 5),
               mapType: MapType.terrain,
               onMapCreated: _onMapCreated,
               myLocationButtonEnabled: true,
